@@ -157,6 +157,16 @@ Example:
   JSON error responses across all endpoints
 - **`@Transactional(readOnly = true)`** — on read methods for better 
   database performance
+- **@PrePersist for calculatedOn** — Timestamp is set automatically
+ at the JPA level before insert service layer never needs to set it manually.
+- **FetchType.LAZY on ManyToOne** — Jurisdiction data is not loaded unless explicitly accessed. 
+Avoids unnecessary joins when only calculation data is needed.
+- **Generic ApiResponse wrapper** — All endpoints return the same structure: success, message, 
+data, timestamp. Makes frontend integration predictable.
+
+
+
+
 
 ---
 
