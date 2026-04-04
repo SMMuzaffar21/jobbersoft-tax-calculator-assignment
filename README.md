@@ -64,6 +64,7 @@ on first startup.
 
 ### 6. View code coverage report
 After running tests, open:
+target/site/jacoco/index.html
 
 ## API Documentation
 Swagger UI is available at:
